@@ -1,6 +1,6 @@
 <?php
 
-namespace (#plugin_namespace#)\Vendor;
+namespace ModularityTestimonials\Vendor;
 
 /**
  * A PSR-4 compatible class loader.
