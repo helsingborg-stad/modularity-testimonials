@@ -2,7 +2,7 @@
     <div class="container">
         <div class="grid">
             @php ($i = 1)
-            @foreach(get_field('school-modularity-testimonial-cards', $ID) as $testimonial)
+            @foreach(get_field('modularity-testimonial-cards', $ID) as $testimonial)
             <div class="grid-xs-12 grid-sm-6 grid-lg-3">
                 <div class="hip-card">
                     @if ($i % 2 === 0 )
