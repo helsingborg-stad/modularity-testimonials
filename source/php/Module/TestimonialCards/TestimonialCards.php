@@ -20,8 +20,10 @@ class TestimonialCards extends \Modularity\Module
 
         $data['testimonials'] = get_field('modularity-testimonial-cards', $this->ID);
 
-        foreach ($data['testimonials'] as &$testimonial) {
-            $testimonial['image_resize'] = $this->getResizedImageUrl($testimonial['image']);
+        if (isset($data['testimonials']) && is_array($data['testimonials']) && !empty($data['testimonials'])) {
+            foreach ($data['testimonials'] as &$testimonial) {
+                $testimonial['image_resize'] = $this->getResizedImageUrl($testimonial['image']);
+            }
         }
 
         //Send to view
