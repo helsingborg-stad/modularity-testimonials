@@ -18,10 +18,34 @@ class TestimonialCards extends \Modularity\Module
     {
         $data = array();
 
-        $data['ID'] = $this->ID;
+        $data['testimonials'] = get_field('modularity-testimonial-cards', $this->ID);
+
+        foreach ($data['testimonials'] as &$testimonial) {
+            $testimonial['image_resize'] = $this->getResizedImageUrl($testimonial['image']);
+        }
 
         //Send to view
         return $data;
+    }
+
+    public function getResizedImageUrl($imageObject)
+    {
+
+        if (!isset($imageObject['id'])) {
+            return null;
+        }
+
+        if (isset($imageObject['id']) && !is_numeric($imageObject['id'])) {
+            return null;
+        }
+
+        if ($image = wp_get_attachment_image_src($imageObject['id'], array(290, 435))) {
+            if (is_array($image) && count($image) == 4) {
+                return $image[0];
+            }
+        }
+
+        return null;
     }
 
     public function template() : string
