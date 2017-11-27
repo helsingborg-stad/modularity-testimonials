@@ -26,6 +26,9 @@ class TestimonialCards extends \Modularity\Module
             }
         }
 
+        //Generate a section id
+        $data['sectionID'] = sanitize_title($this->module->post_title);
+
         //Send to view
         return $data;
     }

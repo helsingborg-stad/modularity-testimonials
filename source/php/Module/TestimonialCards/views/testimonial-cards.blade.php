@@ -1,4 +1,4 @@
-<section class="section section-sm padding-sm section-school-testimonial">
+<section id="{{ $sectionID }}" class="section section-sm padding-sm section-school-testimonial">
     <div class="container">
         <div class="grid">
             @php ($i = 1)
