@@ -29,13 +29,15 @@ class TestimonialCards extends \Modularity\Module
         //Generate a section id
         $data['sectionID'] = sanitize_title($this->post_title);
 
+        //Get flickity settings
+        $data['flickitySettings'] = $this->flickitySettings();
+
         //Send to view
         return $data;
     }
 
     public function getResizedImageUrl($imageObject)
     {
-
         if (!isset($imageObject['id'])) {
             return null;
         }
@@ -51,6 +53,23 @@ class TestimonialCards extends \Modularity\Module
         }
 
         return null;
+    }
+
+    public function flickitySettings()
+    {
+        return json_encode(array(
+            'cellSelector' => '.js-slider',
+            'cellAlign' => 'center',
+            'wrapAround' => true,
+            'pageDots' => false,
+            'freeScroll' => false,
+            'groupCells' => true,
+            'setGallerySize' => true,
+            'watchCSS' => true,
+            'autoPlay' => true,
+            'autoPlay' => 3000,
+            'pauseAutoPlayOnHover' => true,
+        ));
     }
 
     public function template() : string
