@@ -1,6 +1,6 @@
 <section id="{{ $sectionID }}" class="section section-sm padding-sm section-school-testimonial">
     <div class="container">
-        <div class="grid js-autoslide-xs js-autoslide-sm" data-flickity='{{ $flickitySettings }}'>
+        <div class="grid js-autoslide-xs js-autoslide-sm js-autoslide-md" data-flickity='{{ $flickitySettings }}'>
             @php ($i = 1)
             @foreach($testimonials as $testimonial)
             <div class="js-slider grid-xs-12 grid-sm-6 grid-lg-3">
