@@ -60,13 +60,12 @@ class TestimonialCards extends \Modularity\Module
         return json_encode(array(
             'cellSelector' => '.js-slider',
             'cellAlign' => 'center',
-            'wrapAround' => true,
+            'wrapAround' => false,
             'pageDots' => false,
             'freeScroll' => false,
-            'groupCells' => true,
+            'groupCells' => false,
             'setGallerySize' => true,
             'watchCSS' => true,
-            'autoPlay' => true,
             'autoPlay' => 3000,
             'pauseAutoPlayOnHover' => true,
         ));
