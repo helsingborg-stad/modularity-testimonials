@@ -68,6 +68,7 @@ class TestimonialCards extends \Modularity\Module
             'watchCSS' => true,
             'autoPlay' => 3000,
             'pauseAutoPlayOnHover' => true,
+            'wrapAround' => true
         ));
     }
 
