@@ -22,6 +22,7 @@ define('MODULARITYTESTIMONIALS_PATH', plugin_dir_path(__FILE__));
 define('MODULARITYTESTIMONIALS_URL', plugins_url('', __FILE__));
 define('MODULARITYTESTIMONIALS_TEMPLATE_PATH', MODULARITYTESTIMONIALS_PATH . 'templates/');
 define('MODULARITYTESTIMONIALS_MODULE_PATH', MODULARITYTESTIMONIALS_PATH . 'source/php/Module');
+define('MODULARITYTESTIMONIALS_VIEW_PATH', MODULARITYTESTIMONIALS_MODULE_PATH . '/TestimonialCards/views');
 
 load_plugin_textdomain('modularity-testimonials', false, plugin_basename(dirname(__FILE__)) . '/languages');
 
@@ -59,3 +60,12 @@ add_action('plugins_loaded', function () {
         );
     }
 });
+
+
+
+add_filter('/Modularity/externalViewPath', function($viewPaths){
+    $viewPaths['mod-testimonial-card'] = MODULARITYTESTIMONIALS_VIEW_PATH;
+    
+    return $viewPaths;
+});
+
