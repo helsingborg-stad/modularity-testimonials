@@ -9,9 +9,6 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {
-        "helsingborg-stad/modularity-testimonials": ">=0.0.1"
-    },
     "repositories": [
         {
             "type": "vcs",
