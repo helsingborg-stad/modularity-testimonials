@@ -26,6 +26,11 @@ class TestimonialCards extends \Modularity\Module
             }
         }
 
+        //Set image url
+        foreach($data['testimonials'] as &$testimonial) {
+            $testimonial['image'] = $testimonial['image']['url'];
+        }
+
         //Generate a section id
         $data['sectionID'] = sanitize_title($this->post_title);
 
