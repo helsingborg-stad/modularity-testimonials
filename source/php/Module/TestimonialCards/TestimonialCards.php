@@ -19,6 +19,7 @@ class TestimonialCards extends \Modularity\Module
         $data = array();
 
         $data['testimonials'] = get_field('modularity-testimonial-cards', $this->ID);
+        $data['isCarousel'] = get_field('is_carousel', $this->ID);
 
         if (isset($data['testimonials']) && is_array($data['testimonials']) && !empty($data['testimonials'])) {
             foreach ($data['testimonials'] as &$testimonial) {
