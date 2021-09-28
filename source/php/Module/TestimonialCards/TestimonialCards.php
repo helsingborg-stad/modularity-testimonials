@@ -18,25 +18,15 @@ class TestimonialCards extends \Modularity\Module
     {
         $data = array();
 
-        $data['testimonials'] = get_field('modularity-testimonial-cards', $this->ID);
-        $data['isCarousel'] = get_field('is_carousel', $this->ID);
+        $data['testimonials']   = get_field('modularity-testimonial-cards', $this->ID);
+        $data['isCarousel']     = get_field('is_carousel', $this->ID);
 
+        //Get the resized images
         if (isset($data['testimonials']) && is_array($data['testimonials']) && !empty($data['testimonials'])) {
             foreach ($data['testimonials'] as &$testimonial) {
-                $testimonial['image_resize'] = $this->getResizedImageUrl($testimonial['image']);
+                $testimonial['image'] = $this->getResizedImageUrl($testimonial['image']);
             }
         }
-
-        //Set image url
-        foreach($data['testimonials'] as &$testimonial) {
-            $testimonial['image'] = $testimonial['image']['url'];
-        }
-
-        //Generate a section id
-        $data['sectionID'] = sanitize_title($this->post_title);
-
-        //Get flickity settings
-        $data['flickitySettings'] = $this->flickitySettings();
 
         //Send to view
         return $data;
@@ -52,30 +42,13 @@ class TestimonialCards extends \Modularity\Module
             return null;
         }
 
-        if ($image = wp_get_attachment_image_src($imageObject['id'], array(290, 435))) {
+        if ($image = wp_get_attachment_image_src($imageObject['id'], array(160, 240))) {
             if (is_array($image) && count($image) == 4) {
                 return $image[0];
             }
         }
 
         return null;
-    }
-
-    public function flickitySettings()
-    {
-        return json_encode(array(
-            'cellSelector' => '.js-slider',
-            'cellAlign' => 'center',
-            'wrapAround' => false,
-            'pageDots' => false,
-            'freeScroll' => false,
-            'groupCells' => false,
-            'setGallerySize' => true,
-            'watchCSS' => true,
-            'autoPlay' => 3000,
-            'pauseAutoPlayOnHover' => true,
-            'wrapAround' => true
-        ));
     }
 
     public function template() : string
