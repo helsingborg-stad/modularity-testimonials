@@ -10,7 +10,6 @@
             'label' => __('Testimonial Cards', 'modularity-testimonials'),
             'name' => 'modularity-testimonial-cards',
             'type' => 'repeater',
-            'value' => NULL,
             'instructions' => '',
             'required' => 1,
             'conditional_logic' => 0,
@@ -20,8 +19,8 @@
                 'id' => '',
             ),
             'collapsed' => 'field_59f2e7fdb70f6',
-            'min' => 4,
-            'max' => 4,
+            'min' => 1,
+            'max' => 8,
             'layout' => 'block',
             'button_label' => __('Add testimonial', 'modularity-testimonials'),
             'sub_fields' => array(
@@ -30,7 +29,6 @@
                     'label' => __('Image', 'modularity-testimonials'),
                     'name' => 'image',
                     'type' => 'image',
-                    'value' => NULL,
                     'instructions' => '',
                     'required' => 1,
                     'conditional_logic' => 0,
@@ -55,7 +53,6 @@
                     'label' => __('Name', 'modularity-testimonials'),
                     'name' => 'name',
                     'type' => 'text',
-                    'value' => NULL,
                     'instructions' => '',
                     'required' => 1,
                     'conditional_logic' => 0,
@@ -75,7 +72,6 @@
                     'label' => __('Title', 'modularity-testimonials'),
                     'name' => 'title',
                     'type' => 'text',
-                    'value' => NULL,
                     'instructions' => '',
                     'required' => 1,
                     'conditional_logic' => 0,
@@ -95,7 +91,6 @@
                     'label' => __('Testimonial', 'modularity-testimonials'),
                     'name' => 'testimonial',
                     'type' => 'textarea',
-                    'value' => NULL,
                     'instructions' => '',
                     'required' => 1,
                     'conditional_logic' => 0,
@@ -112,6 +107,33 @@
                 ),
             ),
         ),
+        1 => array(
+            'key' => 'field_613b5833d76fa',
+            'label' => __('Show as carousel', 'modularity-testimonials'),
+            'name' => 'is_carousel',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => array(
+                0 => array(
+                    0 => array(
+                        'field' => 'field_59f2e6a797eff',
+                        'operator' => '>',
+                        'value' => '1',
+                    ),
+                ),
+            ),
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'message' => '',
+            'default_value' => 0,
+            'ui' => 1,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
+        ),
     ),
     'location' => array(
         0 => array(
@@ -121,6 +143,13 @@
                 'value' => 'mod-testimonial-card',
             ),
         ),
+        1 => array(
+            0 => array(
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/testimonial-card',
+            ),
+        ),
     ),
     'menu_order' => 0,
     'position' => 'normal',
@@ -128,7 +157,7 @@
     'label_placement' => 'top',
     'instruction_placement' => 'label',
     'hide_on_screen' => '',
-    'active' => 1,
+    'active' => true,
     'description' => '',
 ));
 }

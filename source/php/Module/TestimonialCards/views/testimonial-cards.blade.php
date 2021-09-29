@@ -6,10 +6,8 @@
     @endtypography
 @endif
 
-@testimonials(
-    ['perRow' => 4,
+@testimonials([
+    'isCarousel' => $isCarousel,
     'testimonials' => $testimonials
-    ]
-)
+])
 @endtestimonials
-
