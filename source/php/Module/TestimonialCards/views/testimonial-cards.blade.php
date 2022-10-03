@@ -6,8 +6,17 @@
     @endtypography
 @endif
 
-@testimonials([
+{{-- @testimonials([
     'isCarousel' => $isCarousel,
     'testimonials' => $testimonials
 ])
-@endtestimonials
+@endtestimonials --}}
+
+@slider([
+    
+
+])
+    @foreach ($testimonials as $slide)
+        @includeFirst(['partials.item', 'partials.item'])
+    @endforeach
+@endslider
