@@ -13,8 +13,7 @@
 @endtestimonials --}}
 
 @slider([
-    
-
+    'classList' => ['testimonial-slider'],
 ])
     @foreach ($testimonials as $slide)
         @includeFirst(['partials.item', 'partials.item'])
