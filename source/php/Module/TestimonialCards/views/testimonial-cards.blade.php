@@ -8,6 +8,7 @@
 
 @testimonials([
     'isCarousel' => $isCarousel,
-    'testimonials' => $testimonials
+    'testimonials' => $testimonials,
+    'slidesPerPage' => $slidesPerPage,
 ])
 @endtestimonials

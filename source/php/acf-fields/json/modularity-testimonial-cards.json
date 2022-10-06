@@ -20,6 +20,7 @@
             "max": 8,
             "layout": "block",
             "button_label": "Add testimonial",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_59f2e7fdb70f6",
@@ -43,7 +44,8 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "parent_repeater": "field_59f2e6a797eff"
                 },
                 {
                     "key": "field_59f2e6b997f00",
@@ -62,7 +64,8 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_59f2e6a797eff"
                 },
                 {
                     "key": "field_59f2e6d997f01",
@@ -81,7 +84,8 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_59f2e6a797eff"
                 },
                 {
                     "key": "field_59f2e6e497f02",
@@ -100,7 +104,8 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "",
+                    "parent_repeater": "field_59f2e6a797eff"
                 }
             ]
         },
@@ -130,6 +135,35 @@
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_633ea1471e9c9",
+            "label": "Number of slides shown per page",
+            "name": "slides_per_page",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_613b5833d76fa",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -155,6 +189,12 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": ""
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": "",
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": ""
 }]
 

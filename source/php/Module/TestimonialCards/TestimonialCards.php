@@ -20,6 +20,8 @@ class TestimonialCards extends \Modularity\Module
 
         $data['testimonials']   = get_field('modularity-testimonial-cards', $this->ID);
         $data['isCarousel']     = get_field('is_carousel', $this->ID);
+        $data['slidesPerPage']  = get_field('slides_per_page', $this->ID);
+
 
         //Get the resized images
         if (isset($data['testimonials']) && is_array($data['testimonials']) && !empty($data['testimonials'])) {
