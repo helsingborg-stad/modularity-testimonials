@@ -23,6 +23,7 @@
             'max' => 8,
             'layout' => 'block',
             'button_label' => __('Add testimonial', 'modularity-testimonials'),
+            'rows_per_page' => 20,
             'sub_fields' => array(
                 0 => array(
                     'key' => 'field_59f2e7fdb70f6',
@@ -47,6 +48,7 @@
                     'max_height' => '',
                     'max_size' => '',
                     'mime_types' => '',
+                    'parent_repeater' => 'field_59f2e6a797eff',
                 ),
                 1 => array(
                     'key' => 'field_59f2e6b997f00',
@@ -66,6 +68,7 @@
                     'prepend' => '',
                     'append' => '',
                     'maxlength' => '',
+                    'parent_repeater' => 'field_59f2e6a797eff',
                 ),
                 2 => array(
                     'key' => 'field_59f2e6d997f01',
@@ -85,6 +88,7 @@
                     'prepend' => '',
                     'append' => '',
                     'maxlength' => '',
+                    'parent_repeater' => 'field_59f2e6a797eff',
                 ),
                 3 => array(
                     'key' => 'field_59f2e6e497f02',
@@ -104,6 +108,7 @@
                     'maxlength' => '',
                     'rows' => '',
                     'new_lines' => '',
+                    'parent_repeater' => 'field_59f2e6a797eff',
                 ),
             ),
         ),
@@ -134,6 +139,35 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
+        2 => array(
+            'key' => 'field_633ea1471e9c9',
+            'label' => __('Number of slides shown per page', 'modularity-testimonials'),
+            'name' => 'slides_per_page',
+            'type' => 'number',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => array(
+                0 => array(
+                    0 => array(
+                        'field' => 'field_613b5833d76fa',
+                        'operator' => '==',
+                        'value' => '1',
+                    ),
+                ),
+            ),
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => 1,
+            'min' => 1,
+            'max' => 10,
+            'placeholder' => '',
+            'step' => '',
+            'prepend' => '',
+            'append' => '',
+        ),
     ),
     'location' => array(
         0 => array(
@@ -159,5 +193,11 @@
     'hide_on_screen' => '',
     'active' => true,
     'description' => '',
+    'show_in_rest' => 0,
+    'acfe_display_title' => '',
+    'acfe_autosync' => '',
+    'acfe_form' => 0,
+    'acfe_meta' => '',
+    'acfe_note' => '',
 ));
 }
