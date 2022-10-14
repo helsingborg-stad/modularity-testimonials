@@ -1,7 +1,9 @@
 <?php 
 
-if (function_exists('acf_add_local_field_group')) {
-    acf_add_local_field_group(array(
+
+if (function_exists('acf_add_local_field_group')) {
+
+    acf_add_local_field_group(array(
     'key' => 'group_59f2e69948a47',
     'title' => __('Testimonial Cards', 'modularity-testimonials'),
     'fields' => array(
@@ -160,7 +162,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'default_value' => 1,
+            'default_value' => 2,
             'min' => 1,
             'max' => 10,
             'placeholder' => '',
@@ -200,4 +202,5 @@
     'acfe_meta' => '',
     'acfe_note' => '',
 ));
-}
+
+}
