@@ -12,5 +12,6 @@
     'isCarousel' => $isCarousel,
     'testimonials' => $testimonials,
     'slidesPerPage' => $slidesPerPage,
+    'ariaLabels' => $ariaLabels,
 ])
 @endtestimonials

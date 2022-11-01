@@ -21,6 +21,13 @@ class TestimonialCards extends \Modularity\Module
         $data['testimonials']   = get_field('modularity-testimonial-cards', $this->ID);
         $data['isCarousel']     = get_field('is_carousel', $this->ID);
         $data['slidesPerPage']  = get_field('slides_per_page', $this->ID);
+        $data['ariaLabels'] =  (object) [
+            'prev' => __('Previous slide','modularity'),
+            'next' => __('Next slide', 'modularity'),
+            'first' => __('Go to first slide', 'modularity'),
+            'last' => __('Go to last slide','modularity'),
+            'slideX' => __('Go to slide %s', 'modularity'),
+        ];
 
 
         //Get the resized images
