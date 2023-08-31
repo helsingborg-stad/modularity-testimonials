@@ -26,14 +26,11 @@ define('MODULARITYTESTIMONIALS_VIEW_PATH', MODULARITYTESTIMONIALS_MODULE_PATH . 
 
 load_plugin_textdomain('modularity-testimonials', false, plugin_basename(dirname(__FILE__)) . '/languages');
 
-require_once MODULARITYTESTIMONIALS_PATH . 'source/php/Vendor/Psr4ClassLoader.php';
+// Autoload from plugin
+if (file_exists(MODULARITYTESTIMONIALS_PATH . 'vendor/autoload.php')) {
+    require_once MODULARITYTESTIMONIALS_PATH . 'vendor/autoload.php';
+}
 require_once MODULARITYTESTIMONIALS_PATH . 'Public.php';
-
-// Instantiate and register the autoloader
-$loader = new ModularityTestimonials\Vendor\Psr4ClassLoader();
-$loader->addPrefix('ModularityTestimonials', MODULARITYTESTIMONIALS_PATH);
-$loader->addPrefix('ModularityTestimonials', MODULARITYTESTIMONIALS_PATH . 'source/php/');
-$loader->register();
 
 // Start application
 new ModularityTestimonials\App();

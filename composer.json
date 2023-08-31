@@ -14,5 +14,13 @@
             "type": "vcs",
             "url": "https://github.com/helsingborg-stad/modularity-testimonials.git"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+          "ModularityTestimonials\\": "source/php/"
+        }
+    }
 }
+
+
+
