@@ -4,7 +4,7 @@
  * Plugin Name:       Modularity Testimonials
  * Plugin URI:        https://github.com/helsingborg-stad/modularity-testimonials
  * Description:       Provides testimonial modules
- * Version:           1.0.0
+ * Version: 2.0.0
  * Author:            Nikolas Ramstedt
  * Author URI:        https://github.com/helsingborg-stad
  * License:           MIT

@@ -17,10 +17,8 @@
     ],
     "autoload": {
         "psr-4": {
-          "ModularityTestimonials\\": "source/php/"
+            "ModularityTestimonials\\": "source/php/"
         }
-    }
+    },
+    "version": "2.0.0"
 }
-
-
-
