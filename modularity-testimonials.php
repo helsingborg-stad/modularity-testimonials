@@ -49,7 +49,7 @@ add_action('plugins_loaded', function () {
 /**
  * Registers the module
  */
-add_action('plugins_loaded', function () {
+add_action('init', function () {
     if (function_exists('modularity_register_module')) {
         modularity_register_module(
             MODULARITYTESTIMONIALS_MODULE_PATH ."/TestimonialCards/",
