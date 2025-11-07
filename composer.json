@@ -8,7 +8,18 @@
             "email": "nikolas.ramstedt@helsingborg.se"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "installer-paths": {
+            "vendor/{$vendor}/{$name}": [
+                "type:wordpress-muplugin",
+                "type:wordpress-theme",
+                "type:wordpress-plugin",
+                "type:acf-plugin"
+            ]
+        }
+    },
     "repositories": [
         {
             "type": "vcs",
@@ -20,5 +31,13 @@
             "ModularityTestimonials\\": "source/php/"
         }
     },
-    "version": "4.0.0"
+    "version": "4.0.0",
+    "require": {
+        "helsingborg-stad/municipio": "^6.0.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
 }
