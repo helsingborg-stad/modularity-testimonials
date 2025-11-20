@@ -31,7 +31,6 @@
             "ModularityTestimonials\\": "source/php/"
         }
     },
-    "version": "4.0.1",
     "require": {
         "helsingborg-stad/municipio": "^6.0.0"
     },
