@@ -1,13 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ModularityTestimonials;
 
 class App
 {
     public function __construct()
     {
-        add_action('admin_enqueue_scripts', array($this, 'enqueueStyles'));
-        add_action('admin_enqueue_scripts', array($this, 'enqueueScripts'));
+        add_action('admin_enqueue_scripts', [$this, 'enqueueStyles']);
+        add_action('admin_enqueue_scripts', [$this, 'enqueueScripts']);
     }
 
     /**
@@ -16,7 +18,6 @@ class App
      */
     public function enqueueStyles()
     {
-
     }
 
     /**
@@ -25,6 +26,5 @@ class App
      */
     public function enqueueScripts()
     {
-
     }
 }
